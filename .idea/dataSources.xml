@@ -7,5 +7,13 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://by36jp7xu1nhvc8ioubg-postgresql.services.clever-cloud.com:5432/by36jp7xu1nhvc8ioubg</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Django default" uuid="299ec489-b8bb-4ed7-aae9-0373ca07c449">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/Farmzone/settings.py</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://by36jp7xu1nhvc8ioubg-postgresql.services.clever-cloud.com:5432/by36jp7xu1nhvc8ioubg</jdbc-url>
+    </data-source>
   </component>
 </project>
