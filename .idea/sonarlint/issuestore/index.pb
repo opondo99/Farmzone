@@ -1,15 +1,13 @@
 
-D
-Farmzone/settings.py,4\6\464440305316b08be97b20ae9c02c597255a1a38
-D
-farmzoneweb/views.py,d\8\d8d453346321b1556ab5418552c7fb152ddbd295
-D
-templates/index.html,f\6\f69b8ce2e31684ae06f1b3e84821e07e3dfddb2f
-D
-templates/about.html,5\8\58893e517e4076b20838ca69fba7259ba475306a
-F
-templates/contact.html,7\f\7f50bc186c5d8c3260f8530e58ffb1e0559fb0ca
-C
-farmzoneweb/urls.py,4\e\4ea5a504ad67a2c06e45e6954fc2340ff465892b
 @
 Farmzone/urls.py,7\4\7474fa9124bc13747eaf49aa8d4bd01266199add
+e
+5farmzoneweb/static/css/bootstrap/bootstrap-reboot.css,8\8\88ca47218a4d5e277fa0a35e2b1a7fca96612c19
+]
+-farmzoneweb/static/css/mediaelementplayer.css,2\8\2850100a71d46f03a35c84c5bf863162e1e82963
+_
+/farmzoneweb/static/css/bootstrap-datepicker.css,e\9\e9e5635e8ec91dcdcc9314715f91d51925d08865
+M
+farmzoneweb/static/js/main.js,c\9\c937d988d77a0d3398f092cd4d4652eb3182c16a
+c
+3farmzoneweb/static/css/bootstrap/bootstrap-grid.css,7\e\7eb7436e79c5a4c27942008df3e5ea573d8b9d92

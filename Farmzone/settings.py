@@ -69,7 +69,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Farmzone.wsgi.application'
 
-# Databasem
+# Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 # DATABASES = {
