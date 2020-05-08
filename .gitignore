@@ -7,6 +7,3 @@
 .vscode/
 .pytest_cache
 src.egg-info
-/.vs/
-/.vscode/
-/venv/
