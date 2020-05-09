@@ -5,6 +5,7 @@ from django.utils import timezone
 
 
 class AbstractBase(models.Model):
+
     """Base class for all models."""
 
     id = models.UUIDField(
@@ -18,8 +19,7 @@ class AbstractBase(models.Model):
     updated_by = models.UUIDField(null=True, blank=True)
 
     def preserve_created_and_created_by(self):
-        """Ensure that created and created_by are not changed during
-        updates."""
+        """Preserve created and created_by during updates."""
         try:
             original = self.__class__.objects.get(pk=self.pk)
             self.created = original.created
