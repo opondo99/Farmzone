@@ -35,7 +35,7 @@ class AbstractBase(models.Model):
         super(AbstractBase, self).save(*args, **kwargs)
 
     class Meta:
-        """Define a default least recently used ordering."""
 
+        """Define a default least recently used ordering."""
         abstract = True
         ordering = ('-updated', '-created')
