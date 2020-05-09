@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -35,7 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    # our apps
     'farmzoneweb.apps.FarmzonewebConfig',
+    'backend.farmzone_users',
 ]
 
 MIDDLEWARE = [
@@ -73,14 +79,7 @@ WSGI_APPLICATION = 'Farmzone.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'by36jp7xu1nhvc8ioubg',
-        'USER': 'umui4of7hsqtvmsbnpip',
-        'PASSWORD': 'ayYQZRmaICwAuVmZQnU4',
-        'HOST': 'by36jp7xu1nhvc8ioubg-postgresql.services.clever-cloud.com',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(env='FARMZONE_DATABASE_URL')
 }
 
 # Password validation
