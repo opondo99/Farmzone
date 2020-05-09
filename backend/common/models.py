@@ -1,3 +1,4 @@
+
 import uuid
 
 from django.db import models
@@ -29,7 +30,7 @@ class AbstractBase(models.Model):
     def save(self, *args, **kwargs):
         """Ensure validations are run and updated/created preserved."""
         self.updated = timezone.now()
-        self.full_clean(exclude=None)
+        self.full_clean()
         self.preserve_created_and_created_by()
         super(AbstractBase, self).save(*args, **kwargs)
 
