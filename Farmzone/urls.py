@@ -19,4 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('farmzoneweb.urls', namespace='farmzoneweb')),
+    # path('', include('backend.marketplace', namespace='marketplace')),
+
 ]
+
