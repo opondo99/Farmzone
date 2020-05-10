@@ -1,4 +1,3 @@
-
 import uuid
 
 from django.db import models
@@ -6,8 +5,8 @@ from django.utils import timezone
 
 
 class AbstractBase(models.Model):
-
     """Base class for all models."""
+    # Space after docstring
 
     id = models.UUIDField(
         default=uuid.uuid4,
