@@ -9,3 +9,5 @@
 src.egg-info
 venv/
 .venv//.idea/
+/.vs/
+/.vscode/
