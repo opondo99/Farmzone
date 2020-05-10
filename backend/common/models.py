@@ -1,4 +1,3 @@
-
 import uuid
 
 from django.db import models
@@ -6,7 +5,6 @@ from django.utils import timezone
 
 
 class AbstractBase(models.Model):
-
     """Base class for all models."""
 
     id = models.UUIDField(
@@ -21,6 +19,7 @@ class AbstractBase(models.Model):
 
     def preserve_created_and_created_by(self):
         """Preserve created and created_by during updates."""
+
         try:
             original = self.__class__.objects.get(pk=self.pk)
             self.created = original.created
@@ -30,13 +29,13 @@ class AbstractBase(models.Model):
 
     def save(self, *args, **kwargs):
         """Ensure validations are run and updated/created preserved."""
+
         self.updated = timezone.now()
         self.full_clean()
         self.preserve_created_and_created_by()
         super(AbstractBase, self).save(*args, **kwargs)
 
     class Meta:
-
         """Define a default least recently used ordering."""
 
         abstract = True
