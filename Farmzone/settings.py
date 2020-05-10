@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'farmzoneweb.apps.FarmzonewebConfig',
+    'rest_framework',
+    'backend.marketplace'
 ]
 
 MIDDLEWARE = [
