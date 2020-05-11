@@ -26,9 +26,7 @@ class FarmzoneUserManager(BaseUserManager):
     """A manager class for the FarmzoneUser class."""
 
     def create_user(self, email, password=None, **extra_fields):
-        """
-        Creates and saves a User with the given email and password.
-        """
+        """Creates and saves a User with the given email and password."""
         extra_fields.setdefault('is_superuser', False)
         if not email:
             raise ValueError('The email field must be set')
@@ -54,7 +52,6 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
 
 
 class FarmzoneUser(AbstractBase, AbstractBaseUser):
-
     """A class to hold FarmzoneUser record."""
 
     title = models.CharField(

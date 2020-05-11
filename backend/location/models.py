@@ -3,7 +3,6 @@ from django.db import models
 from backend.common.models import AbstractBase
 
 
-# Create your models here.
 class Location(AbstractBase):
     """A class to hold Location record."""
 
