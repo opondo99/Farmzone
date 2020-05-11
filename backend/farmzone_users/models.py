@@ -6,7 +6,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
 
-from backend.common.models import AbstractBase
+from backend.location.models import Location, AbstractBase
 
 
 GENDER = (
@@ -68,6 +68,8 @@ class FarmzoneUser(AbstractBase, AbstractBaseUser):
     phone_number = models.CharField(max_length=50, null=True, blank=True)
     gender = models.CharField(
         max_length=24, choices=GENDER, null=True, blank=True)
+    Location = models.ForeignKey(
+        Location, null=True, blank=True, on_delete=models.PROTECT)
 
     objects = FarmzoneUserManager()
 

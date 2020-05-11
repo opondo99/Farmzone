@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # our apps
     'farmzoneweb.apps.FarmzonewebConfig',
     'backend.farmzone_users',
+    'backend.location',
 ]
 
 MIDDLEWARE = [
@@ -75,11 +76,28 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Farmzone.wsgi.application'
 
+# Internationalization
+# https://docs.djangoproject.com/en/1.10/topics/i18n/
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'Africa/Nairobi'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
     'default': dj_database_url.config(env='FARMZONE_DATABASE_URL')
+}
+
+AUTH_USER_MODEL = 'farmzone_users.FarmzoneUser'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication'
+    ]
 }
 
 # Password validation
