@@ -19,7 +19,8 @@ class Location(AbstractBase):
     zip_code = models.CharField(
         max_length=10, null=True, blank=True)
     coordinates = ArrayField(
-        models.CharField(max_length=10, blank=True), size=2, blank=True)
+        models.CharField(max_length=10, blank=True), size=2,
+        blank=True, default=list)
 
     def __str__(self):
         return "Location: (county={}, country={})".format(
