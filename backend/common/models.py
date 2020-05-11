@@ -6,6 +6,7 @@ from django.utils import timezone
 
 class AbstractBase(models.Model):
     """Base class for all models."""
+    # Space after docstring
 
     id = models.UUIDField(
         default=uuid.uuid4,
@@ -29,7 +30,7 @@ class AbstractBase(models.Model):
     def save(self, *args, **kwargs):
         """Ensure validations are run and updated/created preserved."""
         self.updated = timezone.now()
-        self.full_clean(exclude=None)
+        self.full_clean()
         self.preserve_created_and_created_by()
         super(AbstractBase, self).save(*args, **kwargs)
 
