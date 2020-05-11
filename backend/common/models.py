@@ -5,7 +5,6 @@ from django.utils import timezone
 
 
 class AbstractBase(models.Model):
-
     """Base class for all models."""
 
     id = models.UUIDField(
@@ -35,7 +34,6 @@ class AbstractBase(models.Model):
         super(AbstractBase, self).save(*args, **kwargs)
 
     class Meta:
-
         """Define a default least recently used ordering."""
 
         abstract = True
