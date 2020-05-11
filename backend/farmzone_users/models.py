@@ -68,7 +68,7 @@ class FarmzoneUser(AbstractBase, AbstractBaseUser):
     phone_number = models.CharField(max_length=50, null=True, blank=True)
     gender = models.CharField(
         max_length=24, choices=GENDER, null=True, blank=True)
-    Location = models.ForeignKey(
+    location = models.ForeignKey(
         Location, null=True, blank=True, on_delete=models.PROTECT)
 
     objects = FarmzoneUserManager()
