@@ -1,3 +1,4 @@
+from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from backend.common.models import AbstractBase
 
@@ -17,6 +18,8 @@ class Location(AbstractBase):
     post_code = models.CharField(max_length=20, null=True, blank=True)
     zip_code = models.CharField(
         max_length=10, null=True, blank=True)
+    coordinates = ArrayField(
+        models.CharField(max_length=10, blank=True), size=2, blank=True)
 
     def __str__(self):
         return "Location: (county={}, country={})".format(
