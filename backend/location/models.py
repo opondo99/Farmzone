@@ -5,7 +5,6 @@ from backend.common.models import AbstractBase
 
 # Create your models here.
 class Location(AbstractBase):
-
     """A class to hold Location record."""
 
     location_name = models.CharField(
@@ -23,5 +22,6 @@ class Location(AbstractBase):
         blank=True, default=list)
 
     def __str__(self):
+        """String representation for the class."""
         return "Location: (county={}, country={})".format(
             self.county, self.country)

@@ -1,5 +1,5 @@
 from django.contrib.auth.models import (
-    AbstractBaseUser, BaseUserManager, PermissionsMixin)
+    AbstractBaseUser, BaseUserManager)
 from django.db import models
 from django.conf import settings
 from django.db.models.signals import post_save
@@ -23,7 +23,6 @@ TITLE = (
 
 
 class FarmzoneUserManager(BaseUserManager):
-
     """A manager class for the FarmzoneUser class."""
 
     def create_user(self, email, password=None, **extra_fields):
@@ -85,4 +84,5 @@ class FarmzoneUser(AbstractBase, AbstractBaseUser):
             self.last_name or '')
 
     def __str__(self):
+        """String representation for the class."""
         return "FarmzoneUser: {}".format(self.user_names)
