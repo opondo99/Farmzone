@@ -1,5 +1,7 @@
+""" This the app side of the API """
 from django.apps import AppConfig
 
 
 class MarketplaceConfig(AppConfig):
-    name = 'marketplace'
+    """ MarketplaceConfig class interfaces this app with other apps"""
+    name = 'backend.marketplace'
