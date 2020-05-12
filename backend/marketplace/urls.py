@@ -1,4 +1,4 @@
-""""Urls file handles  the API urls."""
+"""Urls file handles  the API urls."""
 
 from django.urls import path, include
 
