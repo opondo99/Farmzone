@@ -8,7 +8,11 @@ from .serializers import ProductsAdsSerializers
 
 class ProductsAdsView(viewsets.ModelViewSet):
 
-    """Class ProductsAdsView handles  the database objects access."""
+    """Class ProductsAdsView handles  the database objects access.
+
+    :param: viewers
+    :return: None
+    """
 
     queryset = ProductsAds.objects.all()
     serializer_class = ProductsAdsSerializers
