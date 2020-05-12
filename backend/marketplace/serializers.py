@@ -5,11 +5,11 @@ from .models import ProductsAds
 
 
 class ProductsAdsSerializers(serializers.ModelSerializer):
+
     """ProductsAdsSerializers class serializes and deserializes  python objects to json data."""
 
     class Meta:
         """Meta class defines the fields to be serialized and it's model."""
-
         model = ProductsAds
         fields = ("ads_id", "pricing_id", "category_id", "user_id",
                   "Ads_content", "activity", "Ads_title")
