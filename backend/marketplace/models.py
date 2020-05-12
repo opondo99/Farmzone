@@ -1,9 +1,11 @@
 """Models file handles all the API MODELS."""
+
 import uuid
 from django.db import models
 
 
 class Users(models.Model):
+
     """A Class to handle user details in the farm zone App."""
 
     user_id = models.UUIDField(
@@ -21,7 +23,6 @@ class Users(models.Model):
     @property
     def user_data(self):
         """User computations function user_data."""
-
         return '{} {} {} {} {} {} {}'.format(
             self.user_id or '',
             self.full_names or '',
@@ -38,6 +39,7 @@ class Users(models.Model):
 
 
 class Category(models.Model):
+
     """Class Categorizes all the Products in the platform."""
 
     category_id = models.UUIDField(
@@ -51,7 +53,6 @@ class Category(models.Model):
     @property
     def category_data(self):
         """Category computations function category_data."""
-
         return '{} {} {}'.format(
             self.category_id or '',
             self.category_name or '',
@@ -64,6 +65,7 @@ class Category(models.Model):
 
 
 class Pricing(models.Model):
+
     """Class to handle various products pricing."""
 
     pricing_id = models.UUIDField(
@@ -79,7 +81,6 @@ class Pricing(models.Model):
     @property
     def pricing_data(self):
         """Pricing computations function pricing_data."""
-
         return '{} {} {} {}'.format(
             self.pricing_id or '',
             self.value or '',
@@ -93,6 +94,7 @@ class Pricing(models.Model):
 
 
 class ProductsAds(models.Model):
+
     """Class to hold Farmers Ads records."""
 
     ads_id = models.UUIDField(
@@ -115,7 +117,6 @@ class ProductsAds(models.Model):
     @property
     def product_data(self):
         """Ads computations function product_data."""
-
         return '{} {} {} {}'.format(
             self.ads_id or '',
             self.Ads_content or '',
@@ -129,6 +130,7 @@ class ProductsAds(models.Model):
 
 
 class Reviews(models.Model):
+
     """Class to hold the farmers and other users reviews details."""
 
     reviews_id = models.UUIDField(
@@ -145,7 +147,6 @@ class Reviews(models.Model):
     @property
     def reviews_data(self):
         """Reviews computations function reviews_data."""
-
         return '{} {} {} {}'.format(
             self.reviews_id or '',
             self.status or '',

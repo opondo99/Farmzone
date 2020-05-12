@@ -1,4 +1,5 @@
 """Serializers module will handle all the object serialization for all the models."""
+
 from rest_framework import serializers
 
 from .models import ProductsAds
@@ -7,6 +8,7 @@ from .models import ProductsAds
 class ProductsAdsSerializers(serializers.ModelSerializer):
 
     """ProductsAdsSerializers class serializes and deserializes  python objects to json data."""
+
     class Meta:
         """Meta class defines the fields to be serialized and it's model."""
         model = ProductsAds
