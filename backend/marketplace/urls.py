@@ -1,6 +1,10 @@
+"""" This file handles  the API urls """
+
 from django.urls import path, include
-from .views import ProductsAdsView
+
 from rest_framework import routers
+
+from .views import ProductsAdsView
 
 router = routers.DefaultRouter()
 router.register('ads', ProductsAdsView)
@@ -9,7 +13,3 @@ urlpatterns = [
     path('', include(router.urls))
 
 ]
-"""
-urlpatterns = [
-    url(r'products/$', views.ProductsAdsView.as_view({'post': 'products'}), name='ads'),
-"""

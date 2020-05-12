@@ -1,5 +1,9 @@
+""" This is the admin section of the API """
+
+
 from django.contrib import admin
+
 from .models import ProductsAds
 
-# Register your models here.
+
 admin.site.register(ProductsAds)

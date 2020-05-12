@@ -1,11 +1,12 @@
+""" This module focuses on API views """
+
 from rest_framework import viewsets
 
-from .serializers import ProductsAdsSerializers
 from .models import ProductsAds
+from .serializers import ProductsAdsSerializers
 
 
-# Create your views here.
-# class ProductsAdsView(viewsets.ModelViewSet, generics.RetrieveUpdateDestroyAPIView):
 class ProductsAdsView(viewsets.ModelViewSet):
+    """ Class ProductsAdsView handles  the database objects access """
     queryset = ProductsAds.objects.all()
     serializer_class = ProductsAdsSerializers
