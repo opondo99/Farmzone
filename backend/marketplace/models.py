@@ -1,12 +1,11 @@
-"""
-Models file handles all the API MODELS.
-"""
+"""Models file handles all the API MODELS."""
 import uuid
 from django.db import models
 
 
 class Users(models.Model):
     """A Class to handle user details in the farm zone App."""
+
     user_id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,
@@ -33,11 +32,13 @@ class Users(models.Model):
         )
 
     def __str__(self):
+        """Printable representation of string objects."""
         return "Reviews: {}".format(self.user_data)
 
 
 class Category(models.Model):
     """Class Categorizes all the Products in the platform."""
+
     category_id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,
@@ -56,11 +57,13 @@ class Category(models.Model):
         )
 
     def __str__(self):
+        """Printable representation of string objects."""
         return "Reviews: {}".format(self.category_data)
 
 
 class Pricing(models.Model):
     """Class to handle various products pricing."""
+
     pricing_id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,
@@ -82,11 +85,13 @@ class Pricing(models.Model):
         )
 
     def __str__(self):
+        """Printable representation of string objects."""
         return "Reviews: {}".format(self.pricing_data)
 
 
 class ProductsAds(models.Model):
     """Class to hold Farmers Ads records."""
+
     ads_id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,
@@ -115,11 +120,13 @@ class ProductsAds(models.Model):
         )
 
     def __str__(self):
+        """Printable representation of string objects."""
         return "ProductsAds: {}".format(self.product_data)
 
 
 class Reviews(models.Model):
     """Class to hold the farmers and other users reviews details."""
+
     reviews_id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,
@@ -142,4 +149,5 @@ class Reviews(models.Model):
         )
 
     def __str__(self):
+        """Printable representation of string objects."""
         return "Reviews: {}".format(self.reviews_data)
