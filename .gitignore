@@ -4,11 +4,13 @@
 
 # DIRECTORIES
 **/**/__pycache__
-.vscode/
+
 .pytest_cache
 src.egg-info
 venv/
 .venv/
-
+.idea
 .idea/
-.vs/
+/.idea/
+/.vs/
+/venv/
