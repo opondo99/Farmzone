@@ -51,14 +51,14 @@
 
                     <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="listings.html">Marketplace</a></li>
+                        <li class="active"><a href="listings.html">Marketplace</a></li>
                         <li><a href="about.html">About Farmzone</a></li>
                         <li><a href="forum.html">Forum</a></li>
                         <li><a href="contact.html">Contact</a></li>
 
                         <li class="ml-xl-3 login"><a href="login.html"><span class="border-left pl-xl-4"></span>Log
                             In</a></li>
-                        <li class="active"><a href="register.html">Register</a></li>
+                        <li><a href="register.html">Register</a></li>
 
                         <li><a href="#" class="cta"><span
                                 class="bg-primary text-white rounded">+ Sell an Item/Service</span></a></li>
@@ -77,7 +77,7 @@
 
 
     <div class="site-blocks-cover inner-page-cover overlay"
-         style="background-image: url( {% static 'images/hero_1.jpg' %} );" data-aos="fade"
+         style="background-image: url( {% static 'images/hero_2-1.jpg' %} );" data-aos="fade"
          data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
@@ -87,7 +87,7 @@
 
                     <div class="row justify-content-center mt-5">
                         <div class="col-md-8 text-center">
-                            <h1>Register</h1>
+                            <h1>Welcome to the Farmzone</h1>
                         </div>
                     </div>
 
@@ -97,119 +97,33 @@
         </div>
     </div>
 
-    <div class="site-section bg-light">
+    <div class="site-section">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-7 mb-5" data-aos="fade">
+            <div class="row">
+                <div class="col-lg-8">
 
+                    <div class="row">
 
-                    <form action="#" class="p-5 bg-white">
-
-                        <div class="row form-group">
-
-                            <div class="col-md-12">
-                                <label class="text-black" for="email">Email</label>
-                                <input type="email" id="email" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <label class="text-black" for="subject">Password</label>
-                                <input type="password" id="subject" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <label class="text-black" for="subject">Re-type Password</label>
-                                <input type="password" id="subject" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-12">
-                                <p>Have an account? <a href="login.html">Log In</a></p>
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <input type="submit" value="Sign In" class="btn btn-primary py-2 px-4 text-white">
-                            </div>
-                        </div>
-
-
-                    </form>
+					<!--Login and account stuff here-->
+					{% block main_content %}{% endblock %}
+							</div>
+						  <div class="border"></div>
+                    
                 </div>
-
+                
             </div>
         </div>
     </div>
-
-
-    <div class="newsletter bg-primary py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2>Newsletter</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="col-md-6">
-
-                    <form class="d-flex">
-                        <input type="text" class="form-control" placeholder="Email">
-                        <input type="submit" value="Subscribe" class="btn btn-white">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <footer class="site-footer">
+    
+	<footer class="site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
                     <div class="row">
-                        <div class="col-md-6">
-                            <h2 class="footer-heading mb-4">About</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident rerum unde possimus
-                                molestias dolorem fuga, illo quis fugiat!</p>
-                        </div>
-
-                        <div class="col-md-3">
-                            <h2 class="footer-heading mb-4">Navigations</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3">
-                            <h2 class="footer-heading mb-4">Follow Us</h2>
-                            <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                            <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                            <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-                        </div>
+                        
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <form action="#" method="post">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control border-secondary text-white bg-transparent"
-                                   placeholder="Search products..." aria-label="Enter Email"
-                                   aria-describedby="button-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary text-white" type="button" id="button-addon2">Search
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+              </div>
             <div class="row pt-5 mt-5 text-center">
                 <div class="col-md-12">
                     <div class="border-top pt-5">
@@ -242,5 +156,14 @@
 
 <script src=" {% static 'js/main.js' %} "></script>
 
-</body>
+<script src=" {% static 'js/jquery.isotope.js"></script> <!-- Isotope for gallery -->
+<script src=" {% static 'js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto for images -->
+<script src=" {% static 'js/jquery.cslider.js"></script> <!-- Parallax slider -->
+<script src=" {% static 'js/modernizr.custom.28468.js"></script>
+<script src=" {% static 'js/filter.js"></script> <!-- Filter for support page -->
+<script src=" {% static 'js/cycle.js"></script> <!-- Cycle slider -->
+<script src=" {% static 'js/jquery.flexslider-min.js"></script> <!-- Flex slider -->
+<script src=" {% static 'js/easing.js"></script> <!-- Easing -->
+
+	</body>
 </html>
