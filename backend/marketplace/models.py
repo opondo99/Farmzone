@@ -1,9 +1,12 @@
-from django.db import models
+"""
+This file handles all the API MODELS
+"""
 import uuid
+from django.db import models
 
 
-# Create your models here.
 class Users(models.Model):
+    """ A Class to handle user details in the farm zone App """
     user_id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,
@@ -16,8 +19,25 @@ class Users(models.Model):
     phone_number = models.CharField(max_length=15, null=False, blank=False, default='+254700000000')
     email = models.CharField(max_length=45, null=True, blank=True)
 
+    @property
+    def user_data(self):
+        """ Ads computations function user_data """
+        return '{} {} {} {} {} {} {}'.format(
+            self.user_id or '',
+            self.full_names or '',
+            self.user_type or '',
+            self.activity or '',
+            self.location or '',
+            self.phone_number or '',
+            self.email or ''
+        )
+
+    def __str__(self):
+        return "Reviews: {}".format(self.user_data)
+
 
 class Category(models.Model):
+    """ This Class Categorizes all the Products in the platform """
     category_id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,
@@ -26,8 +46,21 @@ class Category(models.Model):
     category_name = models.CharField(max_length=45, null=False, blank=False, unique=True)
     category_description = models.CharField(max_length=10000, null=False, blank=False)
 
+    @property
+    def category_data(self):
+        """ Ads computations function category_data """
+        return '{} {} {}'.format(
+            self.category_id or '',
+            self.category_name or '',
+            self.category_description or ''
+        )
+
+    def __str__(self):
+        return "Reviews: {}".format(self.category_data)
+
 
 class Pricing(models.Model):
+    """ A Class to handle various products pricing """
     pricing_id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,
@@ -38,27 +71,42 @@ class Pricing(models.Model):
     description = models.TextField(editable=False, null=False, blank=False)
     category_id = models.ForeignKey(Category, verbose_name="category", on_delete=models.CASCADE)
 
-    pass
+    @property
+    def pricing_data(self):
+        """ Ads computations function pricing_data """
+        return '{} {} {} {}'.format(
+            self.pricing_id or '',
+            self.value or '',
+            self.commodity or '',
+            self.description or ''
+        )
+
+    def __str__(self):
+        return "Reviews: {}".format(self.pricing_data)
 
 
 class ProductsAds(models.Model):
     """A class to hold Farmers Ads records."""
-
     ads_id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,
         unique=True,
         primary_key=True)
-    pricing_id = models.ForeignKey(Pricing, default=1, verbose_name="pricing", on_delete=models.CASCADE)
-    category_id = models.ForeignKey(Category, default=1, verbose_name="category", on_delete=models.CASCADE)
+    pricing_id = models.ForeignKey(Pricing, default=1, verbose_name="pricing",
+                                   on_delete=models.CASCADE)
+    category_id = models.ForeignKey(Category,
+                                    default=1,
+                                    verbose_name="category",
+                                    on_delete=models.CASCADE)
     user_id = models.ForeignKey(Users, default=1, verbose_name="users", on_delete=models.CASCADE)
-    Ads_content = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=256, null=False)
+    Ads_content = models.ImageField(upload_to=None, height_field=None, width_field=None,
+                                    max_length=256, null=False)
     activity = models.CharField(max_length=256, null=False, blank=False)
     Ads_title = models.CharField(max_length=256, null=False, blank=False)
 
     @property
     def product_data(self):
-        """ Ads computations function """
+        """ Ads computations function product_data """
         return '{} {} {} {}'.format(
             self.ads_id or '',
             self.Ads_content or '',
@@ -71,6 +119,7 @@ class ProductsAds(models.Model):
 
 
 class Reviews(models.Model):
+    """A Class to hold the farmers and other users reviews details """
     reviews_id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,
@@ -81,3 +130,16 @@ class Reviews(models.Model):
     date = models.DateField(auto_now=True)
     user_id = models.ForeignKey(Users, verbose_name="user", on_delete=models.CASCADE)
     ads_id = models.ForeignKey(ProductsAds, verbose_name="ads", on_delete=models.CASCADE)
+
+    @property
+    def reviews_data(self):
+        """ Ads computations function reviews_data """
+        return '{} {} {} {}'.format(
+            self.reviews_id or '',
+            self.status or '',
+            self.review_message or '',
+            self.date or ''
+        )
+
+    def __str__(self):
+        return "Reviews: {}".format(self.reviews_data)
