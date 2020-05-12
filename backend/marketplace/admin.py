@@ -1,4 +1,4 @@
-""" This is the admin section of the API """
+"""Admin section of the API."""
 
 
 from django.contrib import admin
