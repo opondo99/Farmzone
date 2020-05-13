@@ -7,8 +7,7 @@ from django.utils import timezone
 
 
 class AbstractBase(models.Model):
-    """Base class for all models."""
-    # pylint: disable=D203
+    # pylint: disable=missing-docstring
     id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,
