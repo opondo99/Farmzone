@@ -36,6 +36,7 @@ class AbstractBase(models.Model):
 
     class Meta:
         # pylint: disable=missing-docstring
+        # pylint: disable=D106
 
         abstract = True
         ordering = ('-updated', '-created')
