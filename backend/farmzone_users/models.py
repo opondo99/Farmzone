@@ -1,3 +1,6 @@
+"""FarmzoneUser model module."""
+# pylint: skip-file
+
 from django.contrib.auth.models import (
     AbstractBaseUser, BaseUserManager)
 from django.db import models
@@ -37,6 +40,7 @@ class FarmzoneUserManager(BaseUserManager):
         return user
 
     def create_superuser(self, email, password, **extra_fields):
+        """Creates and saves a super User with the given email and password."""
         extra_fields.setdefault('is_superuser', True)
 
         if extra_fields.get('is_superuser') is not True:
@@ -47,6 +51,7 @@ class FarmzoneUserManager(BaseUserManager):
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
+    """Create auth token after creating a user."""
     if created:
         Token.objects.create(user=instance)
 

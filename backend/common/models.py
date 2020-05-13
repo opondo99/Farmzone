@@ -1,3 +1,8 @@
+"""Base models for all models in the platform."""
+# pylint: disable-all
+# pylint: disable
+
+D211
 import uuid
 
 from django.db import models

@@ -1,3 +1,5 @@
+# pylint: skip-file
+
 from rest_framework import viewsets
 # from rest_framework import permissions
 
@@ -9,4 +11,3 @@ class FarmzoneUserViewSet(viewsets.ModelViewSet):
 
     queryset = FarmzoneUser.objects.all()
     serializer_class = FarmzoneUserSerializer
-    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
