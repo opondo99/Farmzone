@@ -1,4 +1,5 @@
 # pylint: skip-file
+# pylint: disable-all
 # pylint: disable=W,C,R
 
 import uuid
