@@ -1,8 +1,4 @@
-"""Base models for all models in the platform."""
-# pylint: disable-all
-# pylint: disable
-# pylint: disable
-
+# pylint: disable=D203
 
 import uuid
 
