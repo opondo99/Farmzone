@@ -26,7 +26,7 @@ TITLE = (
 
 
 class FarmzoneUserManager(BaseUserManager):
-    """A manager class for the FarmzoneUser class."""
+    # pylint: disable=missing-docstring
 
     def create_user(self, email, password=None, **extra_fields):
         """Creates and saves a User with the given email and password."""
@@ -57,7 +57,7 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
 
 
 class FarmzoneUser(AbstractBase, AbstractBaseUser):
-    """A class to hold FarmzoneUser record."""
+    # pylint: disable=missing-docstring
 
     title = models.CharField(
         max_length=256, choices=TITLE, null=True, blank=True)

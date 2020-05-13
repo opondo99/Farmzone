@@ -1,6 +1,4 @@
 """Serializer class for model FarmzoneUser."""
-# pylint: skip-file
-# pylint: disable=D203
 
 from rest_framework import serializers
 
@@ -8,10 +6,10 @@ from .models import FarmzoneUser
 
 
 class FarmzoneUserSerializer(serializers.ModelSerializer):
-    """Serializer for FarmzoneUser class."""
+    # pylint: disable=missing-docstring
 
     class Meta:
-        """Meta class for FarmzoneUserSerializer."""
+        # pylint: disable=missing-docstring
 
         model = FarmzoneUser
         fields = '__all__'

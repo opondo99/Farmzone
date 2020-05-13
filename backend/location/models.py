@@ -1,12 +1,10 @@
-# pylint: skip-file
-
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from backend.common.models import AbstractBase
 
 
 class Location(AbstractBase):
-    """A class to hold Location record."""
+    # pylint: disable=missing-docstring
 
     location_name = models.CharField(
         max_length=100, null=True, blank=True)

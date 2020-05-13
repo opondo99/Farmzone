@@ -34,8 +34,8 @@ class AbstractBase(models.Model):
         self.preserve_created_and_created_by()
         super(AbstractBase, self).save(*args, **kwargs)
 
-    class Meta:  # pylint: disable=D203
-        """Define a default least recently used ordering."""
+    class Meta:
+        # pylint: disable=missing-docstring
 
         abstract = True
         ordering = ('-updated', '-created')
