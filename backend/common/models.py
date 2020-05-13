@@ -2,7 +2,6 @@
 # pylint: disable-all
 # pylint: disable
 
-D211
 import uuid
 
 from django.db import models
