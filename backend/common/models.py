@@ -1,4 +1,4 @@
-# pylint: disable=D203
+# pylint: skip-file
 
 import uuid
 
@@ -7,7 +7,7 @@ from django.utils import timezone
 
 
 class AbstractBase(models.Model):
-    """Base class for all models."""  # pylint: disable=D203
+    """Base class for all models."""
 
     id = models.UUIDField(
         default=uuid.uuid4,
@@ -35,7 +35,7 @@ class AbstractBase(models.Model):
         self.preserve_created_and_created_by()
         super(AbstractBase, self).save(*args, **kwargs)
 
-    class Meta:  # pragma pylint: disable=D203
+    class Meta:  # pylint: disable=D203
         """Define a default least recently used ordering."""
 
         abstract = True
