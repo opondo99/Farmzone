@@ -1,3 +1,5 @@
+# pylint: skip-file
+
 from io import StringIO
 
 import pytest
