@@ -15,7 +15,7 @@ class Thread(models.Model):
     Other people can comment about it
     '''
     thread_id = models.UUIDField(primary_key = True , unique = True , default=uuid.uuid4)
-    # user_id = models.ForeignKey(User , on_delete = models.CASCADE)
+    user_id = models.ForeignKey(User , on_delete = models.CASCADE)
     thread_message = models.TextField(max_length = 1255)
     thread_post_time = models.DateTimeField(auto_now_add=True)
 
@@ -35,7 +35,7 @@ class Forum(models.Model):
     This will be a reply from # thread table
     '''
     forum_id = models.UUIDField(primary_key = True , unique = True , default=uuid.uuid4)
-    # user_id = models.ForeignKey(User,on_delete = models.CASCADE)#this is not indicated in the schema
+    user_id = models.ForeignKey(User,on_delete = models.CASCADE)#this is not indicated in the schema
     forum_post = models.TextField(max_length=1255)
     forum_post_time = models.DateTimeField(auto_now_add=True)
     thread_id = models.ForeignKey(Thread , on_delete = models.CASCADE)
@@ -58,7 +58,7 @@ class Chat(models.Model):
     about the product
     '''
     chat_id = models.UUIDField(default = uuid.uuid4 , primary_key = True , unique = True)
-    # user_id = models.ForeignKey(User , on_delete = models.CASCADE)
+    user_id = models.ForeignKey(User , on_delete = models.CASCADE)
     message = models.TextField(max_length = 1255)
     # username .....my thougth is we have user_id we can the get the username using it
     #i aslo think we can get the time---- in full format instead of getting time and date separetely
@@ -66,8 +66,8 @@ class Chat(models.Model):
     message_post_time = models.DateTimeField(auto_now_add = True)
     #i have added ads-id since am seeing its purposes for showing which commodity was
     # being commented about
-    # ads_id = models.ForeignKey(ProductsAds , on_delete = models.CASCADE)
-    # category_id = models.ForeignKey(Category , on_delete = models.CASCADE)
+    ads_id = models.ForeignKey(ProductsAds , on_delete = models.CASCADE)
+    category_id = models.ForeignKey(Category , on_delete = models.CASCADE)
     #quite not sure of purpose for thread id here
 
 
