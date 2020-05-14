@@ -37,7 +37,6 @@ class AbstractBase(models.Model):
         super(AbstractBase, self).save(*args, **kwargs)
 
     class Meta:
-        # pylint: disable=missing-docstring
-        # pylint: disable=E
+        """String representation for the class."""
         abstract = True
         ordering = ('-updated', '-created')

@@ -9,7 +9,7 @@ class FarmzoneUserSerializer(serializers.ModelSerializer):
     # pylint: disable=missing-docstring
 
     class Meta:
-        # pylint: disable=W,C,R,E,F,D
+        """String representation for the class."""
 
         model = FarmzoneUser
         fields = '__all__'
