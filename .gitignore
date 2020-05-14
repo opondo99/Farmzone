@@ -7,6 +7,9 @@
 .vscode/
 .pytest_cache
 src.egg-info
+/venv/
+/.vs/
+/.idea/
 /.vs/
 /.vscode/
 /venv/
