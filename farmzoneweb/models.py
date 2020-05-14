@@ -21,12 +21,12 @@ class Thread(models.Model):
 
     class Meta:
         '''
-        name for the table
+        Name for the table
         '''
         db_table = "Thread"
 
     def _str__(self):
-        '''thread instance'''
+        '''Thread instance'''
         return f'{self.thread_message}  by user_id {self.user_id}'
 
 
@@ -49,12 +49,12 @@ class Forum(models.Model):
 
     class Meta:
         '''
-        name for the table
+        Name for the table
         '''
         db_table = "Forum"
 
     def __str__(self):
-        '''checking forum instance'''
+        '''Checking forum instance'''
         return f'{self.forum_post}  by user_id {self.user_id} on thread with id {self.thread_id}'
 
 
@@ -81,13 +81,13 @@ class Chat(models.Model):
 
     class Meta():
         '''
-        name for the table
+        Name for the table
         '''
 
         db_table = "Chat"
 
 
     def __str__(self):
-        '''check data'''
+        '''Check data'''
 
         return f'{self.message} by {self.user_id}'
