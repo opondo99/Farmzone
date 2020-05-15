@@ -6,7 +6,7 @@ from django.db import models
 
 class Users(models.Model):
 
-    """A Class to handle user details in the farm zone App."""
+    '''Class to handle user details in the farm zone App.'''
 
     user_id = models.UUIDField(
         default=uuid.uuid4,
@@ -40,7 +40,7 @@ class Users(models.Model):
 
 class Category(models.Model):
 
-    """Class Categorizes all the Products in the platform."""
+    '''Class Categorizes all the Products in the platform.'''
 
     category_id = models.UUIDField(
         default=uuid.uuid4,
@@ -66,7 +66,7 @@ class Category(models.Model):
 
 class Pricing(models.Model):
 
-    """Class to handle various products pricing."""
+    '''Class to handle various products pricing.'''
 
     pricing_id = models.UUIDField(
         default=uuid.uuid4,
@@ -95,7 +95,7 @@ class Pricing(models.Model):
 
 class ProductsAds(models.Model):
 
-    """Class to hold Farmers Ads records."""
+    '''Class to hold Farmers Ads records.'''
 
     ads_id = models.UUIDField(
         default=uuid.uuid4,
@@ -131,7 +131,7 @@ class ProductsAds(models.Model):
 
 class Reviews(models.Model):
 
-    """Class to hold the farmers and other users reviews details."""
+    '''Class to hold the farmers and other users reviews details.'''
 
     reviews_id = models.UUIDField(
         default=uuid.uuid4,
