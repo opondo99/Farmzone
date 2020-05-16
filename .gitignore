@@ -1,6 +1,7 @@
  # FILES
 **/**/.pyc
 .DS_Store
+*.iml
 
 # DIRECTORIES
 **/**/__pycache__
@@ -12,4 +13,5 @@ src.egg-info
 /.venv/
 env.sh
 /.mypy_cache/
-/.idea/
+.idea/
+
