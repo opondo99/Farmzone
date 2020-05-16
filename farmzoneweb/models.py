@@ -12,7 +12,7 @@ class Thread(models.Model):
     '''
     The starter for the thread
     Once it has been created  by a user,,
-    Other people can comment about it
+    Other people can comment about it.
     '''
     thread_id = models.UUIDField(primary_key = True , unique = True , default=uuid.uuid4)
     # user_id = models.ForeignKey(User , on_delete = models.CASCADE)
@@ -21,12 +21,12 @@ class Thread(models.Model):
 
     class Meta:
         '''
-        Name for the table
+        Name for the table.
         '''
         db_table = "Thread"
 
     def _str__(self):
-        '''Thread instance'''
+        '''Thread instance.'''
         return f'{self.thread_message}  by user_id {self.user_id}'
 
 
@@ -36,7 +36,7 @@ class Forum(models.Model):
     with the time of post
     poster who posted
     and the messages itself
-    This will be a reply from # thread table
+    This will be a reply from # thread table.
     '''
     forum_id = models.UUIDField(primary_key = True , unique = True , default=uuid.uuid4)
     # user_id = models.ForeignKey(User,on_delete = models.CASCADE)#this is not indicated in the schema
@@ -49,12 +49,12 @@ class Forum(models.Model):
 
     class Meta:
         '''
-        Name for the table
+        Name for the table.
         '''
         db_table = "Forum"
 
     def __str__(self):
-        '''Checking forum instance'''
+        '''Checking forum instance.'''
         return f'{self.forum_post}  by user_id {self.user_id} on thread with id {self.thread_id}'
 
 
@@ -63,7 +63,7 @@ class Forum(models.Model):
 class Chat(models.Model):
     '''
     The implimentation for the caht table in which a user can comment
-    about the product
+    about the product.
     '''
     chat_id = models.UUIDField(default = uuid.uuid4 , primary_key = True , unique = True)
     # user_id = models.ForeignKey(User , on_delete = models.CASCADE)
@@ -81,13 +81,12 @@ class Chat(models.Model):
 
     class Meta():
         '''
-        Name for the table
+        Name for the table.
         '''
-
         db_table = "Chat"
 
 
     def __str__(self):
-        '''Check data'''
+        '''Check data.'''
 
         return f'{self.message} by {self.user_id}'
