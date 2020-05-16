@@ -26,7 +26,7 @@ class Thread(models.Model):
         db_table = "Thread"
 
     def _str__(self):
-        '''Thread instance.'''
+        """Thread instance."""
         return f'{self.thread_message}  by user_id {self.user_id}'
 
 
@@ -54,7 +54,7 @@ class Forum(models.Model):
         db_table = "Forum"
 
     def __str__(self):
-        '''Checking forum instance.'''
+        """Checking forum instance."""
         return f'{self.forum_post}  by user_id {self.user_id} on thread with id {self.thread_id}'
 
 
@@ -87,6 +87,6 @@ class Chat(models.Model):
 
 
     def __str__(self):
-        '''Check data.'''
+        """Check data."""
 
         return f'{self.message} by {self.user_id}'
