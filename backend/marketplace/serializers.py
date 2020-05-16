@@ -13,8 +13,9 @@ class ProductsAdsSerializers(serializers.ModelSerializer):
     """
 
     class Meta:
-
-        """Defines models and fields to be serialized."""
+        """
+        Defines models and fields to be serialized.
+        """
 
         model = models.ProductsAds
         fields = ("ads_id", "pricing_id", "category_id", "user_id",
