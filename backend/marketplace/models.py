@@ -141,14 +141,9 @@ class ProductsAds(models.Model):
         return "ProductsAds: {}".format(self.product_data)
 
 
-# noqa: D212,D204,D404
+# noqa: D212,D204,D404, D213
 
 class Reviews(models.Model):
-
-    """
-    Hold the farmers and other users reviews details.
-    """
-
     reviews_id = models.UUIDField(
         default=uuid.uuid4,
         editable=False,

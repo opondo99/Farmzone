@@ -10,9 +10,7 @@ from .serializers import ProductsAdsSerializers
 
 class ProductsAdsView(viewsets.ModelViewSet):
 
-    """
-    Handles the database objects access.
-    """
+    """Handles the database objects access."""
 
     queryset = ProductsAds.objects.all()
     serializer_class = ProductsAdsSerializers

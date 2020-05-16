@@ -6,8 +6,6 @@ from django.apps import AppConfig
 
 class MarketplaceConfig(AppConfig):
 
-    """
-    Configurations interfaces this app with other apps.
-    """
+    """Configurations interfaces this app with other apps."""
 
     name = 'backend.marketplace'
