@@ -7,7 +7,7 @@ from .models import ProductsAds
 
 class ProductsAdsSerializers(serializers.ModelSerializer):
     """
-    ProductsAdsSerializers class serializes and deserializes python objects to JSON data,
+    ProductsAdsSerializers class serializes and deserializes python objects to JSON data.
     """
 
     class Meta:
