@@ -1,3 +1,5 @@
+# pylint: disable=D212
+
 """App side of the API."""
 
 from django.apps import AppConfig
