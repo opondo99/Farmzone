@@ -1,14 +1,14 @@
-# FILES
+ # FILES
 **/**/.pyc
 .DS_Store
 
 # DIRECTORIES
 **/**/__pycache__
-
+.vscode/
+.idea/
+.vs/
 .pytest_cache
 src.egg-info
+venv/
 .venv/
-/.idea/
-/.vs/
-/venv/
-/.vscode/
+env.sh
