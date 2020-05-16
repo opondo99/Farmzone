@@ -7,10 +7,8 @@
 
 .pytest_cache
 src.egg-info
-venv/
 .venv/
-.idea
-.idea/
 /.idea/
 /.vs/
 /venv/
+/.vscode/
