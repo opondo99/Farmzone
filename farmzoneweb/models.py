@@ -88,5 +88,4 @@ class Chat(models.Model):
 
     def __str__(self):
         """Check data."""
-
         return f'{self.message} by {self.user_id}'
