@@ -146,7 +146,7 @@ class ProductsAds(models.Model):
 class Reviews(models.Model):
 
     """
-    A class to hold the farmers and other users reviews details.
+    Hold the farmers and other users reviews details.
     """
 
     reviews_id = models.UUIDField(

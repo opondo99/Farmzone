@@ -9,11 +9,9 @@ from .serializers import ProductsAdsSerializers
 # noqa
 
 class ProductsAdsView(viewsets.ModelViewSet):
-    """
-    A class ProductsAdsView handles  the database objects access.
 
-    :param: model-views
-    :return: None
+    """
+    Handles the database objects access.
     """
 
     queryset = ProductsAds.objects.all()
