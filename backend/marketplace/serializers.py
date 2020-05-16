@@ -9,7 +9,7 @@ from .models import ProductsAds
 
 class ProductsAdsSerializers(serializers.ModelSerializer):
     """
-    ProductsAdsSerializers class serializes and deserializes python objects to JSON data.
+    A productsAdsSerializers class serializes and deserializes python objects to JSON data.
     """
 
     class Meta:

@@ -6,8 +6,9 @@ from .models import ProductsAds
 from .serializers import ProductsAdsSerializers
 
 
+# noqa
+
 class ProductsAdsView(viewsets.ModelViewSet):
-    # noqa
     """
     Class ProductsAdsView handles  the database objects access.
 
