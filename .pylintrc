@@ -1,4 +1,5 @@
 disable=
+    D211, D404, D203, D213, D212
     too-many-instance-attributes,
     len-as-condition,
     too-few-public-methods,
