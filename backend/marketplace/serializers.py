@@ -14,6 +14,7 @@ class ProductsAdsSerializers(serializers.ModelSerializer):
 
     # noqa: D212,D204,D404, D213
     class Meta:
+
         """Defines fields and models to be serialized."""
 
         model = ProductsAds

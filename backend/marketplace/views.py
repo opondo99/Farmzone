@@ -7,6 +7,7 @@ from .serializers import ProductsAdsSerializers
 
 
 # noqa
+# noqa: D203, D211
 
 class ProductsAdsView(viewsets.ModelViewSet):
     """Handles the database objects access."""

@@ -105,6 +105,7 @@ class Pricing(models.Model):
 # noqa: D212,D204,D404
 
 class ProductsAds(models.Model):
+
     """It holds farmers Ads products data."""
 
     ads_id = models.UUIDField(
