@@ -1,5 +1,4 @@
-"""Farmzone URL Configuration
-
+"""Farmzone URL Configuration.
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
@@ -13,12 +12,24 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken import views
+
+
+from backend.farmzone_users.views import FarmzoneUserViewSet
+
+router = DefaultRouter()
+router.register(r'users', FarmzoneUserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
+    path('login/', views.obtain_auth_token),
+    path('api/', include(router.urls)),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('', include('farmzoneweb.urls', namespace='farmzoneweb')),
-    # path('', include('backend.marketplace', namespace='marketplace')),
 
 ]
