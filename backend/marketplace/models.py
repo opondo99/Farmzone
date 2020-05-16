@@ -106,7 +106,7 @@ class Pricing(models.Model):
 
 class ProductsAds(models.Model):
     """
-    Class to hold Farmers Ads records.
+    Hold Farmers Ads records.
     """
 
     ads_id = models.UUIDField(
@@ -144,7 +144,10 @@ class ProductsAds(models.Model):
 # noqa: D212,D204,D404
 
 class Reviews(models.Model):
-    """A class to hold the farmers and other users reviews details."""
+
+    """
+    A class to hold the farmers and other users reviews details.
+    """
 
     reviews_id = models.UUIDField(
         default=uuid.uuid4,

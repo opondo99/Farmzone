@@ -9,12 +9,14 @@ from .models import ProductsAds
 
 class ProductsAdsSerializers(serializers.ModelSerializer):
     """
-    A productsAdsSerializers class serializes and deserializes python objects to JSON data.
+    Serializes and deserializes python objects to JSON data.
     """
 
     # noqa: D212,D204,D404
     class Meta:
-        """Meta class defines the fields to be serialized and it's model."""
+        """
+        Defines the fields to be serialized and it's model.
+        """
 
         model = ProductsAds
         fields = ("ads_id", "pricing_id", "category_id", "user_id",
