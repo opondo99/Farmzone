@@ -14,5 +14,3 @@ venv/
 /.idea/
 /.vs/
 /venv/
-*.doctree
-dist/
