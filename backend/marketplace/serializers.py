@@ -12,10 +12,9 @@ class ProductsAdsSerializers(serializers.ModelSerializer):
     A productsAdsSerializers class serializes and deserializes python objects to JSON data.
     """
 
+    # noqa: D212,D204,D404
     class Meta:
-        """
-        Meta class defines the fields to be serialized and it's model.
-        """
+        """Meta class defines the fields to be serialized and it's model."""
 
         model = ProductsAds
         fields = ("ads_id", "pricing_id", "category_id", "user_id",

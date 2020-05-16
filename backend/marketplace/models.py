@@ -144,9 +144,7 @@ class ProductsAds(models.Model):
 # noqa: D212,D204,D404
 
 class Reviews(models.Model):
-    """
-    A class to hold the farmers and other users reviews details.
-    """
+    """A class to hold the farmers and other users reviews details."""
 
     reviews_id = models.UUIDField(
         default=uuid.uuid4,
