@@ -107,7 +107,7 @@ class Pricing(models.Model):
 class ProductsAds(models.Model):
 
     """
-    It holds farmers Ads products data.
+    Get hold of farmers Ads products data.
     """
 
     ads_id = models.UUIDField(

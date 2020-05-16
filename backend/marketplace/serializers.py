@@ -14,7 +14,7 @@ class ProductsAdsSerializers(serializers.ModelSerializer):
 
     class Meta:
         """
-        Defines models and fields to be serialized.
+        Get models and fields defined to be serialized.
         """
 
         model = models.ProductsAds
