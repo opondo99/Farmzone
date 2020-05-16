@@ -85,8 +85,6 @@ class Chat(models.Model):
         '''
         db_table = "Chat"
 
-
-    def __str__(self):
-        """Check data."""
-
+    def __str__():
+        """Chat instance."""
         return f'{self.message} by {self.user_id}'
