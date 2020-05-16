@@ -4,9 +4,12 @@ import uuid
 from django.db import models
 
 
-class Users(models.Model):
+# noqa: D212,D204,D404
 
-    """A Class to handle user details in the farm zone App."""
+class Users(models.Model):
+    """
+    A Class to handle user details in the farm zone App.
+    """
 
     user_id = models.UUIDField(
         default=uuid.uuid4,
@@ -38,9 +41,12 @@ class Users(models.Model):
         return "Reviews: {}".format(self.user_data)
 
 
-class Category(models.Model):
+# noqa: D212,D204,D404
 
-    """Class Categorizes all the Products in the platform."""
+class Category(models.Model):
+    """
+    Class Categorizes all the Products in the platform.
+    """
 
     category_id = models.UUIDField(
         default=uuid.uuid4,
@@ -64,9 +70,12 @@ class Category(models.Model):
         return "Reviews: {}".format(self.category_data)
 
 
-class Pricing(models.Model):
+# noqa: D212,D204,D404
 
-    """Class to handle various products pricing."""
+class Pricing(models.Model):
+    """
+    Class to handle various products pricing.
+    """
 
     pricing_id = models.UUIDField(
         default=uuid.uuid4,
@@ -93,9 +102,12 @@ class Pricing(models.Model):
         return "Reviews: {}".format(self.pricing_data)
 
 
-class ProductsAds(models.Model):
+# noqa: D212,D204,D404
 
-    """Class to hold Farmers Ads records."""
+class ProductsAds(models.Model):
+    """
+    Class to hold Farmers Ads records.
+    """
 
     ads_id = models.UUIDField(
         default=uuid.uuid4,
@@ -129,9 +141,12 @@ class ProductsAds(models.Model):
         return "ProductsAds: {}".format(self.product_data)
 
 
-class Reviews(models.Model):
+# noqa: D212,D204,D404
 
-    """Class to hold the farmers and other users reviews details."""
+class Reviews(models.Model):
+    """
+    Class to hold the farmers and other users reviews details.
+    """
 
     reviews_id = models.UUIDField(
         default=uuid.uuid4,

@@ -5,6 +5,8 @@ from rest_framework import serializers
 from .models import ProductsAds
 
 
+# noqa: D212,D204,D404
+
 class ProductsAdsSerializers(serializers.ModelSerializer):
     """
     ProductsAdsSerializers class serializes and deserializes python objects to JSON data.
