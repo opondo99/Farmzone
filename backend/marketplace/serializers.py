@@ -2,7 +2,7 @@
 
 from rest_framework import serializers
 
-from .models import ProductsAds
+from . import models
 
 
 # noqa: D212,D204,D404
@@ -12,12 +12,10 @@ class ProductsAdsSerializers(serializers.ModelSerializer):
     Serializes and deserializes python objects to JSON data.
     """
 
-    # noqa: D212,D204,D404, D213
     class Meta:
+        """Defines models and fields to be serialized."""
 
-        """Defines fields and models to be serialized."""
-
-        model = ProductsAds
+        model = models.ProductsAds
         fields = ("ads_id", "pricing_id", "category_id", "user_id",
                   "Ads_content", "activity", "Ads_title")
 
