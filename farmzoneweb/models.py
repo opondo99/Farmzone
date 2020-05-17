@@ -71,7 +71,6 @@ class Chat(models.Model):
     # username .....my thougth is we have user_id we can the get the username using it
     #i aslo think we can get the time---- in full format instead of getting time and date separetely
     #it will be broken apart from there
-    message_post_time = models.DateTimeField(auto_now_add = True)
     #i have added ads-id since am seeing its purposes for showing which commodity was
     # being commented about
     # ads_id = models.ForeignKey(ProductsAds , on_delete = models.CASCADE)
@@ -81,6 +80,7 @@ class Chat(models.Model):
 
     class Meta():
         '''
+        message_post_time = models.DateTimeField(auto_now_add = True)
         Name for the table.
         '''
         db_table = "Chat"
