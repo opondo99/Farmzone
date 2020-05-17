@@ -85,6 +85,12 @@ class Chat(models.Model):
         '''
         db_table = "Chat"
 
+<<<<<<< HEAD
     def __str__():
         """Chat instance."""
+=======
+
+    def __str__(self):
+        """Check data."""
+>>>>>>> origin/forum_back
         return f'{self.message} by {self.user_id}'
