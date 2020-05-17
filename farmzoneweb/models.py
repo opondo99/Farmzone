@@ -36,7 +36,7 @@ class Forum(models.Model):
     with the time of post
     poster who posted
     and the messages itself
-    This will be a reply from # thread table.
+    The model will be a reply from # thread table.
     '''
     forum_id = models.UUIDField(primary_key = True , unique = True , default=uuid.uuid4)
     # user_id = models.ForeignKey(User,on_delete = models.CASCADE)#this is not indicated in the schema
@@ -68,6 +68,7 @@ class Chat(models.Model):
     chat_id = models.UUIDField(default = uuid.uuid4 , primary_key = True , unique = True)
     # user_id = models.ForeignKey(User , on_delete = models.CASCADE)
     message = models.TextField(max_length = 1255)
+    message_post_time = models.DateTimeField(auto_now_add = True)
     # username .....my thougth is we have user_id we can the get the username using it
     #i aslo think we can get the time---- in full format instead of getting time and date separetely
     #it will be broken apart from there
@@ -80,17 +81,16 @@ class Chat(models.Model):
 
     class Meta():
         '''
-        message_post_time = models.DateTimeField(auto_now_add = True)
         Name for the table.
         '''
         db_table = "Chat"
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
     def __str__():
         """Chat instance."""
-=======
+# =======
 
     def __str__(self):
         """Check data."""
->>>>>>> origin/forum_back
+
         return f'{self.message} by {self.user_id}'
