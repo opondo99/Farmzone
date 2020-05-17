@@ -1,6 +1,7 @@
-# FILES
+ # FILES
 **/**/.pyc
 .DS_Store
+*.iml
 
 # DIRECTORIES
 **/**/__pycache__
